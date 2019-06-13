@@ -1,0 +1,45 @@
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+@width:100%;
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+.bordered{
+  border-top: solid 5px black;
+  border-bottom: solid 5px black;
+}
+.nav{
+  width:@width;
+  height:100%;
+  border:1px solid red;
+  .border-radius(10px);
+
+  span{
+    float: left;
+    color:green;
+    font-size: 12px;
+  }
+
+  ul{
+    text-align: center;
+    list-style:none;
+    font-size:17px;
+
+    li{
+      float: left;
+      width:22%;
+      line-height:36px;
+      .bordered;
+      a{
+        color:blue;
+
+        &:hover{
+          font-size:20px;
+          color:@light-blue;
+        }
+      }
+    }
+  }
+}
